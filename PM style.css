@@ -1,0 +1,530 @@
+*{
+    box-sizing: border-box;
+}
+
+body { 
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+  }
+
+.mainContent {
+    display: none;
+}
+
+/* Top Row */
+.header {
+    background-color: #2c2c2c; 
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 0;
+    left: 0;
+    overflow-x: hidden;
+}
+
+/* Title */
+.header_title {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    position: absolute;
+    top: 10px;
+    left: 16px;
+    color: white;
+}
+
+.header_title h1 {
+    margin: 0;
+    font-size: 20px;
+    color: white;
+}
+
+.header_title p {
+    margin: 4px 0 0;
+    font-size: 14px;
+    color: white;
+}
+
+/* Header Button Layout */
+.header_buttons {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    right: 0;
+    text-align: right;
+    padding: 16px;
+    
+}
+
+.header_buttons button {
+    background-color: #2c2c2c;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.header_buttons button:hover {
+    background-color: #777;   
+}
+
+.start_page_buttons {
+    display: flex;
+}
+
+.website_info_buttons {
+    display: none;
+}
+
+.after_back_buttons {
+    display: none;
+}
+
+/* Left Column */
+.L_column {
+    background-color: #2c2c2c;
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 0;
+    left: 0;
+    overflow-x: hidden;
+    top: 50px;
+}
+
+/* Website Buttons */
+.l_buttons {
+    text-align: center;
+    padding-top: 16px;
+}
+
+.l_buttons button {
+    background-color: #2c2c2c;
+    color: white;
+    border: none;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    padding: 20px 30px;
+    cursor: pointer;
+}
+
+.l_buttons button:hover {
+    background-color: #777; 
+    
+}
+
+/* Right Column */
+.R_column {
+    background-color: #525252;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    left: 200px;
+    right: 0;
+    top: 50px;
+    overflow-x: hidden;
+}
+
+/* Right Column Style */
+.starting_page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+    margin-left: -180px;
+    margin-top: -20px;
+    color: #888
+}
+
+.starting_page .right_page_icon {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+}
+
+.starting_page h2 {
+    margin: 0;
+    font-size: 18px;
+    color: white;
+}
+
+/* Search Bar */
+.search_bar {
+    text-align: right;
+    padding-right: 20px;
+}
+
+.highlight {
+    background-color: #777 !important;
+}
+
+/* Add Website */
+.add_website {
+    padding: 20px;
+    color: white;
+    display: none;
+}
+
+.add_website h2 {
+    margin: 0 0 20px;
+    color: white;
+}
+
+.add_website label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.add_website input {
+    width: 30%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #2c2c2c;
+    color: white;
+}
+
+.add_website button {
+    background-color: #6b6b6b;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.add_website button:hover {
+    background-color: #9a9a9a;
+}
+
+/* Settings */
+.settings_page {
+    padding: 20px;
+    padding-bottom: 100px;
+    color: white;
+    background-color: #525252;
+    height: 100%;
+    overflow-y: auto;
+    display: none;
+}
+
+.settings_page h2,
+.settings_page h3 {
+    margin: 0 0 20px;
+    color: #ffffff;
+}
+
+.settings_page label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.settings_page input,
+.settings_page select {
+    width: 30%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #2c2c2c;
+    color: white;
+}
+
+.settings_page button {
+    background-color: #6b6b6b;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.settings_page button:hover {
+    background-color: #9a9a9a;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #777;
+    margin: 20px 0;
+}
+
+/* Favourites */
+.favourites_page {
+    padding: 20px;
+    color: white;
+    background-color: #525252;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.favourites_page h2 {
+    margin: 0 0 20px;
+    color: white;
+}
+
+/* Login/Sign Up Background */
+.start_background {
+    display: block;
+    background-color:#2c2c2c; 
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    z-index: 0;
+    left: 0;
+    overflow-x: hidden;
+}
+
+.start_background h1 {
+    margin-bottom: 20px;
+    font-size: 30px;
+    color: white;
+}
+
+.start_background .start_page_icon {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+}
+
+.start_background button {
+    background-color: #6b6b6b;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Login Page */
+.login_page {
+    background-color: #525252;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    padding: 20px;
+    text-align: center;
+    z-index: 1;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.login_page h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: white;
+}
+
+.login_page form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login_page input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: #2c2c2c;
+    color: white;
+}
+
+.login_page button {
+    background-color: #6b6b6b;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.login_page button:hover {
+    background-color: #9a9a9a;
+}
+
+/* Signup Page */
+.signup_page {
+    display: none;
+    background-color: #525252;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    padding: 20px;
+    text-align: center;
+    z-index: 1;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.signup_page h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: white;
+}
+
+.signup_page form {
+    display: flex;
+    flex-direction: column;
+}
+
+.signup_page label {
+    display: block;
+    margin-bottom: 5px;
+    color: white;
+}
+
+.signup_page input,
+.signup_page select {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: #2c2c2c;
+    color: white;
+}
+
+.signup_page button {
+    background-color: #6b6b6b;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.signup_page button:hover {
+    background-color: #9a9a9a;
+}
+
+#signupPasswordStrength {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#passwordStrength {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#revealButton {
+    margin-top: 8px;
+    padding: 6px 12px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+/* Website Information */
+.website_info {
+    padding: 20px;
+    color: white;
+    position: relative;
+}
+
+.website_info h2 {
+    margin: 0 0 20px;
+    color: white;
+}
+
+.website_info p {
+    margin: 5px 0;
+    color: white;
+}
+
+.website_info button {
+    background-color: #6b6b6b;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.website_info button:hover {
+    background-color: #9a9a9a;
+}
+
+#securityRisk {
+    background-color: #6b6b6b;
+    color: white;
+    font-size: 15px;
+    padding: 10px 20px;
+    margin-left: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    border: 2px solid #cf3a30; 
+    border-radius: 4px;
+}
+
+#securityRisk:hover {
+    transform: scale(1.2);
+}
+
+/* Edit Website Information */
+.edit_website {
+    display: block;
+    margin: 0 0 20px;
+    color: white;
+}
+
+.edit_website label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.edit_website input {
+    width: 30%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #2c2c2c;
+    color: white;
+}
+
+.edit_website button {
+    background-color: #6b6b6b;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.edit_website button:hover {
+    background-color: #9a9a9a;
+}
+
+.after_back_buttons {
+    display: none;
+    gap: 10px;
+}
+
+.after_back_buttons button {
+    background-color: #2c2c2c;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.after_back_buttons button:hover {
+    background-color: #777;
+}
+
